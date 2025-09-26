@@ -10,7 +10,7 @@ ZIP_DIR="dp-AuditLogService7268"
 ZIP_FILE_NAME="$ZIP_DIR.zip"
 EXTRACT_DIR="/opt/local/share/deploy/temp"
 LOCAL_ZIP_PATH="$BASE_PATH/deploy/$ZIP_FILE_NAME"
-SERVICE_DIR="DoctorPayout-AuthService"
+SERVICE_DIR="DoctorPayout-AuditService"
 
 # Stop the service
 echo "Stopping service: $SERVICE_NAME"
@@ -24,7 +24,7 @@ unzip -o "$LOCAL_ZIP_PATH" -d "$EXTRACT_DIR"
 echo "Copying contents to: $EXTRACT_DIR"
 rm -rf "$BASE_PATH/$SERVICE_DIR/publish"
 mkdir -p "$BASE_PATH/$SERVICE_DIR/publish"
-cp -r "$EXTRACT_DIR/$ZIP_DIR"* "$BASE_PATH/$SERVICE_DIR/publish"
+cp -r "$EXTRACT_DIR/$ZIP_DIR/*" "$BASE_PATH/$SERVICE_DIR/publish"
 
 rm -rf /opt/local/share/deploy/temp
 
