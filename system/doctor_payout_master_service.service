@@ -3,13 +3,14 @@ Description=Doctor Payout Master Service
 After=network.target
 
 [Service]
-WorkingDirectory=/opt/local/share/DoctorPayout-MasterService
+WorkingDirectory=/opt/local/share/DoctorPayout-MasterService/publish
 ExecStart=/usr/bin/dotnet /opt/local/share/DoctorPayout-MasterService/publish/MasterService.API.dll
 Restart=always
 RestartSec=5
 User=www-data
-Environment=DOTNET_ENVIRONMENT=uat
+Environment=DOTNET_ENVIRONMENT=UAT-Linux
 Environment=ASPNETCORE_URLS=http://127.0.0.1:7264
+Environment=DoctorPayout_EncryptionKey=h8f9J1kL2mN3pQrS4tUvWxY5zABCD6Ef
 
 [Install]
 WantedBy=multi-user.target

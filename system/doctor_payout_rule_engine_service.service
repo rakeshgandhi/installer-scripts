@@ -3,13 +3,14 @@ Description=Doctor Payout Rule Engine Service
 After=network.target
 
 [Service]
-WorkingDirectory=/opt/local/share/DoctorPayout-RuleEngineService
+WorkingDirectory=/opt/local/share/DoctorPayout-RuleEngineService/publish
 ExecStart=/usr/bin/dotnet /opt/local/share/DoctorPayout-RuleEngineService/publish/RuleEngineService.API.dll
 Restart=always
 RestartSec=5
 User=www-data
-Environment=DOTNET_ENVIRONMENT=uat
+Environment=DOTNET_ENVIRONMENT=UAT-Linux
 Environment=ASPNETCORE_URLS=http://127.0.0.1:7275
+Environment=DoctorPayout_EncryptionKey=h8f9J1kL2mN3pQrS4tUvWxY5zABCD6Ef
 
 [Install]
 WantedBy=multi-user.target
