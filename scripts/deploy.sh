@@ -1,13 +1,15 @@
 #!/bin/bash
 
+rm -rf /opt/local/share/deploy/temp
 mkdir -p /opt/local/share/deploy/temp
+
 
 BASE_PATH="/opt/local/share/deploy"
 SERVICE_NAME="doctor_payout_audit_log_service"
 ZIP_DIR="dp-AuditLogService7268"
 ZIP_FILE_NAME="$ZIP_DIR.zip"
 EXTRACT_DIR="/opt/local/share/deploy/temp"
-LOCAL_ZIP_PATH="$EXTRACT_DIR/$ZIP_FILE_NAME"
+LOCAL_ZIP_PATH="$BASE_PATH/$ZIP_FILE_NAME"
 SERVICE_DIR="DoctorPayout-AuthService"
 
 # Stop the service
@@ -23,6 +25,8 @@ echo "Copying contents to: $EXTRACT_DIR"
 rm -rf "$BASE_PATH/$SERVICE_DIR/publish"
 mkdir -p "$BASE_PATH/$SERVICE_DIR/publish"
 cp -r "$EXTRACT_DIR/$ZIP_DIR"* "$BASE_PATH/$SERVICE_DIR/publish"
+
+rm -rf /opt/local/share/deploy/temp
 
 # Start the service
 echo "Starting service: $SERVICE_NAME"
