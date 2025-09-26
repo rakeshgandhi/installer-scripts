@@ -3,7 +3,7 @@ Description=Doctor Payout Audit Log Service
 After=network.target
 
 [Service]
-WorkingDirectory=/opt/local/share/DoctorPayout-AuditLogService
+WorkingDirectory=/opt/local/share/DoctorPayout-AuditLogService/publish
 ExecStart=/usr/bin/dotnet /opt/local/share/DoctorPayout-AuditLogService/publish/AuditLogService.API.dll
 Restart=always
 RestartSec=5
