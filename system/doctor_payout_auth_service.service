@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 WorkingDirectory=/opt/local/share/DoctorPayout-AuthService/publish
-ExecStart=/usr/bin/dotnet /opt/local/share/DoctorPayout-AuthService/publish/AuthService.API.dll
+ExecStart=/usr/bin/dotnet /opt/local/share/DoctorPayout-AuthService/publish/AuthenticationService.API.dll
 Restart=always
 RestartSec=5
 User=www-data

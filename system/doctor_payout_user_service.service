@@ -1,10 +1,10 @@
 [Unit]
-Description=Doctor Payout Service Discovery Service
+Description=Doctor Payout User Service
 After=network.target
 
 [Service]
-WorkingDirectory=/opt/local/share/DoctorPayout-ServiceDiscoveryService/publish
-ExecStart=/usr/bin/dotnet /opt/local/share/DoctorPayout-ServiceDiscoveryService/publish/ServiceDiscoveryService.API.dll
+WorkingDirectory=/opt/local/share/DoctorPayout-UserService/publish
+ExecStart=/usr/bin/dotnet /opt/local/share/DoctorPayout-UserService/publish/UserService.API.dll
 Restart=always
 RestartSec=5
 User=www-data
