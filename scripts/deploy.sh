@@ -4,12 +4,12 @@ rm -rf /opt/local/share/deploy/temp
 mkdir -p /opt/local/share/deploy/temp
 
 
-BASE_PATH="/opt/local/share/deploy"
+BASE_PATH="/opt/local/share"
 SERVICE_NAME="doctor_payout_audit_log_service"
 ZIP_DIR="dp-AuditLogService7268"
 ZIP_FILE_NAME="$ZIP_DIR.zip"
 EXTRACT_DIR="/opt/local/share/deploy/temp"
-LOCAL_ZIP_PATH="$BASE_PATH/$ZIP_FILE_NAME"
+LOCAL_ZIP_PATH="$BASE_PATH/deploy/$ZIP_FILE_NAME"
 SERVICE_DIR="DoctorPayout-AuthService"
 
 # Stop the service
