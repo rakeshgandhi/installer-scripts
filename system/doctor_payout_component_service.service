@@ -1,0 +1,15 @@
+[Unit]
+Description=Doctor Payout Component Service
+After=network.target
+
+[Service]
+WorkingDirectory=/opt/local/share/DoctorPayout-ComponentService
+ExecStart=/usr/bin/dotnet /opt/local/share/DoctorPayout-ComponentService/publish/ComponentService.API.dll
+Restart=always
+RestartSec=5
+User=www-data
+Environment=DOTNET_ENVIRONMENT=uat
+Environment=ASPNETCORE_URLS=http://127.0.0.1:7269
+
+[Install]
+WantedBy=multi-user.target

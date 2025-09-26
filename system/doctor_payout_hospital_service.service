@@ -1,0 +1,15 @@
+[Unit]
+Description=Doctor Payout Hospital Service
+After=network.target
+
+[Service]
+WorkingDirectory=/opt/local/share/DoctorPayout-HospitalService
+ExecStart=/usr/bin/dotnet /opt/local/share/DoctorPayout-HospitalService/publish/HospitalService.API.dll
+Restart=always
+RestartSec=5
+User=www-data
+Environment=DOTNET_ENVIRONMENT=uat
+Environment=ASPNETCORE_URLS=http://127.0.0.1:7263
+
+[Install]
+WantedBy=multi-user.target

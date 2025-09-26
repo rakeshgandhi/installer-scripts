@@ -1,5 +1,5 @@
 [Unit]
-Description=Doctor Payout Service Discovery
+Description=Doctor Payout Service Discovery Service
 After=network.target
 
 [Service]
@@ -9,7 +9,7 @@ Restart=always
 RestartSec=5
 User=www-data
 Environment=DOTNET_ENVIRONMENT=uat
-Environment=ASPNETCORE_URLS=http://127.0.0.1:7270
+Environment=ASPNETCORE_URLS=http://127.0.0.1:7265
 
 [Install]
 WantedBy=multi-user.target

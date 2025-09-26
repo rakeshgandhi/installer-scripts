@@ -1,0 +1,15 @@
+[Unit]
+Description=Doctor Payout Entitlement Service
+After=network.target
+
+[Service]
+WorkingDirectory=/opt/local/share/DoctorPayout-EntitlementService
+ExecStart=/usr/bin/dotnet /opt/local/share/DoctorPayout-EntitlementService/publish/EntitlementService.API.dll
+Restart=always
+RestartSec=5
+User=www-data
+Environment=DOTNET_ENVIRONMENT=uat
+Environment=ASPNETCORE_URLS=http://127.0.0.1:7262
+
+[Install]
+WantedBy=multi-user.target
