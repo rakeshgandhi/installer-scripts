@@ -5,6 +5,7 @@ folders=(
     "DoctorPayout-AuditLogService"
     "DoctorPayout-AuthService"
     "DoctorPayout-ComponentService"
+    "DoctorPayout-DataLoaderService"
     "DoctorPayout-DoctorService"
     "DoctorPayout-EntitlementService"
     "DoctorPayout-HospitalService"
