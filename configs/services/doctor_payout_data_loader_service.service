@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 WorkingDirectory=/opt/local/share/DoctorPayout-DataLoaderService/publish
-ExecStart=/usr/bin/dotnet /opt/local/share/DoctorPayout-DataLoaderService/publish/DataLoaderService.API.dll
+ExecStart=/usr/bin/dotnet /opt/local/share/DoctorPayout-DataLoaderService/publish/DataLoaderApi.dll
 Restart=always
 RestartSec=5
 User=www-data
