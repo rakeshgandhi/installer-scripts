@@ -1,5 +1,5 @@
 apt update
-apt install curl gnupg2 ca-certificates lsb-release ubuntu-keyring
+apt install curl gnupg2 ca-certificates lsb-release ubuntu-keyring -y
 
 curl https://nginx.org/keys/nginx_signing.key | gpg --dearmor \
     | sudo tee /usr/share/keyrings/nginx-archive-keyring.gpg >/dev/null
@@ -12,9 +12,8 @@ curl https://nginx.org/keys/nginx_signing.key | gpg --dearmor \
 echo -e "Package: *\nPin: origin nginx.org\nPin: release o=nginx\nPin-Priority: 900\n" \
     | sudo tee /etc/apt/preferences.d/99nginx
 
-sudo apt update
-
-sudo apt install nginx
+apt update -y
+apt install nginx -y
 
 nginx -v
 

@@ -1,7 +1,8 @@
 #!/bin/bash
 
-folder_base_path="/opt/local/share"
-folders=(
+base_path="/opt/local/share"
+
+dirs=(
     "DoctorPayout-AuditLogService"
     "DoctorPayout-AuthService"
     "DoctorPayout-ComponentService"
@@ -20,6 +21,10 @@ folders=(
     "DoctorPayout-WorkflowService"
 )
 
-for folder in "${folders[@]}"; do
-    mkdir -p "$folder_base_path/$folder/publish"
+for dir in "${dirs[@]}"; do
+    publish_dir_path="$base_path/$dir"
+    echo "Creating $publish_dir_path"
+    mkdir -p "publish_dir_path"
 done
+
+mkdir -p "$base_path/DoctorPayout-WebApp"
