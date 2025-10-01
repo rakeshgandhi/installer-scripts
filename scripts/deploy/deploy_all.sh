@@ -21,5 +21,5 @@ services=(
 
 for service in "${services[@]}"; do
     IFS=',' read -r SERVICE_NAME ZIP_DIR SERVICE_DIR <<< "$service"
-    ./deploy_base.sh "$SERVICE_NAME" "$ZIP_DIR" "$SERVICE_DIR"
+    ./deploy_service_base.sh "$SERVICE_NAME" "$ZIP_DIR" "$SERVICE_DIR"
 done
