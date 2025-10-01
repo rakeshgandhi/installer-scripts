@@ -4,6 +4,7 @@ services=(
     "doctor_payout_audit_log_service"
     "doctor_payout_auth_service"
     "doctor_payout_component_service"
+    "doctor_payout_data_loader_service"
     "doctor_payout_doctor_service"
     "doctor_payout_entitlement_service"
     "doctor_payout_hospital_service"
