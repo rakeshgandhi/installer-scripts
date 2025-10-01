@@ -4,7 +4,7 @@ services=(
     "doctor_payout_audit_log_service,dp-AuditLogService7268,DoctorPayout-AuditLogService"
     "doctor_payout_auth_service,dp-AuthService7261,DoctorPayout-AuthService"
     "doctor_payout_component_service,dp-ComponentService7269,DoctorPayout-ComponentService"
-    "doctor_patyout_data_loader_service,dp-DataLoader7271,DoctorPayout-DataLoaderService"
+    "doctor_payout_data_loader_service,dp-DataLoader7271,DoctorPayout-DataLoaderService"
     "doctor_payout_doctor_service,dp-DoctorService7272,DoctorPayout-DoctorService"
     "doctor_payout_entitlement_service,dp-EntitlementService7262,DoctorPayout-EntitlementService"
     "doctor_payout_hospital_service,dp-HospitalService7263,DoctorPayout-HospitalService"
