@@ -8,7 +8,7 @@ ExecStart=/usr/bin/dotnet /opt/local/share/DoctorPayout-RuleEngineService/publis
 Restart=always
 RestartSec=5
 User=www-data
-Environment=DOTNET_ENVIRONMENT=UAT-Linux
+Environment=DOTNET_ENVIRONMENT=UAT
 Environment=ASPNETCORE_URLS=http://127.0.0.1:7275
 Environment=DoctorPayout_EncryptionKey=h8f9J1kL2mN3pQrS4tUvWxY5zABCD6Ef
 
