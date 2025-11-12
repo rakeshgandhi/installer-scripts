@@ -1,0 +1,15 @@
+[Unit]
+Description=Doctor Payout Loader Worker Service
+After=network.target
+
+[Service]
+WorkingDirectory=/opt/local/share/DoctorPayout-DataLoaderWorkerService/publish
+ExecStart=/usr/bin/dotnet /opt/local/share/DoctorPayout-DataLoaderWorkerService/publish/LoaderWorkerService.dll
+Restart=always
+RestartSec=5
+User=www-data
+Environment=DOTNET_ENVIRONMENT=UAT
+Environment=DoctorPayout_EncryptionKey=h8f9J1kL2mN3pQrS4tUvWxY5zABCD6Ef
+
+[Install]
+WantedBy=multi-user.target

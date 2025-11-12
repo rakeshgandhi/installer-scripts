@@ -17,6 +17,8 @@ services=(
     "doctor_payout_user_service,dp-UserService7265,DoctorPayout-UserService"
     "doctor_payout_variable_service,dp-VariableService7267,DoctorPayout-VariableService"
     "doctor_payout_workflow_service,dp-WorkflowService7274,DoctorPayout-WorkflowService"
+    "doctor_payout_data_loader_worker_service,dp-LoaderWorkerService,DoctorPayout-DataLoaderWorkerService"
+    "doctor_payout_rule_engine_worker_service,dp-RuleEngine,DoctorPayout-RuleEngineWorkerService"
 )
 
 for service in "${services[@]}"; do

@@ -19,6 +19,8 @@ dirs=(
     "DoctorPayout-UserService"
     "DoctorPayout-VariableService"
     "DoctorPayout-WorkflowService"
+    "DoctorPayout-DataLoaderWorkerService"
+    "DoctorPayout-RuleEngineWorkerService"
 )
 
 for dir in "${dirs[@]}"; do
