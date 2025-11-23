@@ -22,6 +22,6 @@ services=(
 )
 
 for service in "${services[@]}"; do
-    echo "Enabling service: $service"
-    systemctl enable "$service"
+    echo "Stopping service: $service"
+    systemctl stop "$service"
 done

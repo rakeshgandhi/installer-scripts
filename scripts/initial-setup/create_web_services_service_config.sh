@@ -4,7 +4,7 @@
 SERVICE_BASE_DIR="/etc/systemd/system"
 
 REPO_ROOT_DIR="$(cd ../ && cd ../ && pwd)"
-SERVICES_DIR="$REPO_ROOT_DIR/configs/services"
+SERVICES_DIR="$REPO_ROOT_DIR/configs/services/web-services"
 
 echo "Using service base path: $SERVICE_BASE_DIR"
 
