@@ -1,7 +1,7 @@
 #!/bin/bash
 
 services=(
-    "doctor_payout_data_loader_worker_service,dp-LoaderWorkerService,DoctorPayout-DataLoaderWorkerService"
+    "doctor_payout_loader_worker_service,dp-LoaderWorkerService,DoctorPayout-DataLoaderWorkerService"
     "doctor_payout_rule_engine_worker_service,dp-RuleEngine,DoctorPayout-RuleEngineWorkerService"
 )
 
